@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import { Libre_Caslon_Text } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Fonte elegante (títulos)
+const libreCaslon = Libre_Caslon_Text({
   subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-libre-caslon",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
 });
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${libreCaslon.variable} ${inter.variable} font-inter antialiased text-gray-800`}
       >
         {children}
       </body>
