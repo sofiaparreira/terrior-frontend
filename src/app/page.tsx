@@ -15,7 +15,7 @@ export default function Home() {
   } = useMainViewModel();
   return (
     <>
-    <Navbar />
+      <Navbar />
       <main>
         <section className="w-full h-96 bg-[url('/imagem-banner.jpg')] bg-cover bg-center relative">
 
@@ -40,37 +40,37 @@ export default function Home() {
 
         <section className="px-48 py-8 space-y-16 justify-center flex flex-col items-center">
           <div className="bg-[#F1F7ED] px-8 py-6 grid grid-cols-4 text-primary w-full">
-              <span className="flex flex-col gap-2 justify-center items-center">
-                <FaTruck className="text-3xl" />
-                <p className="text-sm font-medium">Frete Grátis</p>
-              </span>
+            <span className="flex flex-col gap-2 justify-center items-center">
+              <FaTruck className="text-3xl" />
+              <p className="text-sm font-medium">Frete Grátis</p>
+            </span>
 
-              <span className="flex flex-col gap-2 justify-center items-center">
-                <FaLocationDot className="text-3xl" />
-                <p className="text-sm font-medium">Envio para todo o brasil</p>
-              </span>
-
-
-              <span className="flex flex-col gap-2 justify-center items-center">
-                <FaTruck className="text-3xl" />
-                <p className="text-sm font-medium">Em até 6x sem juros</p>
-              </span>
+            <span className="flex flex-col gap-2 justify-center items-center">
+              <FaLocationDot className="text-3xl" />
+              <p className="text-sm font-medium">Envio para todo o brasil</p>
+            </span>
 
 
-              <span className="flex flex-col gap-2 justify-center items-center">
-                <FaLock className="text-3xl" />
-                <p className="text-sm font-medium">100% seguro</p>
-              </span>
+            <span className="flex flex-col gap-2 justify-center items-center">
+              <FaTruck className="text-3xl" />
+              <p className="text-sm font-medium">Em até 6x sem juros</p>
+            </span>
+
+
+            <span className="flex flex-col gap-2 justify-center items-center">
+              <FaLock className="text-3xl" />
+              <p className="text-sm font-medium">100% seguro</p>
+            </span>
           </div>
 
 
           <div className="grid grid-cols-4 gap-8 w-full">
             {wines.map((wine, key) => (
               <ProductCard
-                key={key} 
+                key={key}
                 name={wine.name}
                 src={wine.imageUrl}
-                />
+              />
             ))}
           </div>
 
